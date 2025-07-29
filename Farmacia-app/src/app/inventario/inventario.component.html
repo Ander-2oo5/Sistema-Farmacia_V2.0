@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h4>Inventario de Productos</h4>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Fecha Vencimiento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let producto of inventario">
+            <td>{{ producto.id }}</td>
+            <td>{{ producto.nombre }}</td>
+            <td>{{ producto.cantidad }}</td>
+            <td>{{ producto.precio | currency:'S/.' }}</td>
+            <td>{{ producto.fechaVencimiento | date:'dd/MM/yyyy' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

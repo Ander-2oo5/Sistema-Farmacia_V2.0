@@ -1,0 +1,65 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h4>Dashboard de Ventas</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-12">
+          <h5>Ventas por Día</h5>
+          <ngx-charts-bar-vertical
+            [view]="view"
+            [results]="ventasPorDia"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [gradient]="gradient"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel">
+          </ngx-charts-bar-vertical>
+        </div>
+      </div>
+      <hr>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h5>Productos más vendidos (Gráfico de torta)</h5>
+          <ngx-charts-pie-chart
+            [view]="view"
+            [results]="productosMasVendidosPie"
+            [legend]="showLegend"
+            [labels]="true"
+            [doughnut]="true">
+          </ngx-charts-pie-chart>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h5>Productos más vendidos</h5>
+          <div class="mb-2">
+            <label for="filtroProducto" class="form-label">Filtrar por producto:</label>
+            <select id="filtroProducto" class="form-select form-select-sm w-auto d-inline-block" [(ngModel)]="selectedProductoId" name="filtroProducto">
+              <option [ngValue]="null">Todos</option>
+              <option *ngFor="let prod of productosMasVendidos" [ngValue]="prod.id">{{ prod.nombre }}</option>
+            </select>
+          </div>
+          <table class="table table-striped table-bordered table-sm">
+            <thead>
+              <tr>
+                <th>Producto</th>
+                <th>Cantidad vendida</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let prod of productosFiltrados">
+                <td>{{ prod.nombre }}</td>
+                <td>{{ prod.cantidad }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
