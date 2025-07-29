@@ -6,7 +6,6 @@ Este es un sistema integral de gestión para farmacias, diseñado para simplific
 ## 🧑‍💻 Desarrollado por Andersson Jaren Flores Ruiz    
 **Curso:** Desarrollo Web Integrado
 **Año:** 2025
-
 ---
 
 ## ✨ Características Principales
