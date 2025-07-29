@@ -1,4 +1,4 @@
-# 💊 Sistema de Gestión de Farmacia
+# 💊 Sistema de Gestión de Farmacia v2.0
 
 Este es un sistema integral de gestión para farmacias, diseñado para simplificar y optimizar las operaciones diarias de una farmacia moderna. Está compuesto por un backend robusto en **Spring Boot** (`farmacia-spring`) y un frontend dinámico en **Angular** (`farmacia-app`), ofreciendo una solución completa y segura para la administración de productos, clientes, ventas, usuarios y más.
 
